@@ -1,0 +1,31 @@
+{
+  "name": "voice-agents",
+  "displayName": "Voice Agents",
+  "version": "1.0.0",
+  "description": "Claude Code skills for AI phone and voice agents: cascaded vs. speech-to-speech architecture, Pipecat and LiveKit, Twilio Media Streams, Plivo and Exotel streaming, barge-in, prompting for speech and Hinglish, per-stage latency budgets, testing and monitoring, TCPA / TRAI / EU AI Act / PECR compliance, and G.711 mu-law audio handling.",
+  "author": {
+    "name": "Viprasol Tech",
+    "email": "support@viprasol.com",
+    "url": "https://viprasol.com"
+  },
+  "homepage": "https://github.com/Viprasol-Tech/claude-voice-agent-skills",
+  "repository": "https://github.com/Viprasol-Tech/claude-voice-agent-skills",
+  "license": "MIT",
+  "keywords": [
+    "voice-ai",
+    "voice-agent",
+    "ai-calling",
+    "twilio",
+    "media-streams",
+    "exotel",
+    "plivo",
+    "pipecat",
+    "livekit",
+    "openai-realtime",
+    "latency",
+    "tcpa",
+    "trai",
+    "mulaw",
+    "claude-code-skills"
+  ]
+}

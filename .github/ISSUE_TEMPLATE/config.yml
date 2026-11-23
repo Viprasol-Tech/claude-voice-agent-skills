@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and ideas
+    url: https://github.com/Viprasol-Tech/claude-voice-agent-skills/discussions
+    about: Ask how to use a skill or share what you built.
+  - name: Report a security problem
+    url: https://github.com/Viprasol-Tech/claude-voice-agent-skills/security/advisories/new
+    about: Please report vulnerabilities privately.

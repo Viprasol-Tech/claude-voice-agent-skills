@@ -1,0 +1,28 @@
+name: Bug or wrong fact
+description: A skill gave wrong code, a wrong fact, or a script failed
+labels: [bug]
+body:
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Skill
+      options: [voice-agent-architecture, telephony-integration, voice-prompting, latency-tuning, voice-agent-testing, calling-compliance, audio-formats, other]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you asked, what you got, and what was wrong. Paste error messages exactly; remove any secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What is correct
+      description: Link to the official documentation if it is a platform fact.
+  - type: input
+    id: version
+    attributes:
+      label: Plugin version and Claude Code version
+      placeholder: "voice-agents 1.0.0, Claude Code 2.x"

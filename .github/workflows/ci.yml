@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate skills and scripts (${{ matrix.os }}, py${{ matrix.python }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Validate marketplace, plugin and every skill
+        run: python tests/validate_repo.py
+      - name: Script self-tests
+        run: |
+          python plugins/voice-agents/skills/audio-formats/scripts/voice_audio.py --self-test
+          python plugins/voice-agents/skills/latency-tuning/scripts/latency_report.py --self-test
+      - name: Installer smoke test
+        if: runner.os == 'Linux'
+        run: |
+          bash install.sh "$RUNNER_TEMP/skills"
+          test "$(ls "$RUNNER_TEMP/skills" | wc -l)" -eq 7

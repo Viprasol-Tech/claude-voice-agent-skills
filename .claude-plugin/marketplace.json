@@ -1,0 +1,27 @@
+{
+  "name": "claude-voice-agent-skills",
+  "description": "Free Claude Code skills for building AI phone and voice agents: architecture, Twilio/Plivo/Exotel telephony, voice prompting, latency tuning, testing, calling compliance (TCPA, TRAI, EU AI Act) and telephony audio formats.",
+  "owner": {
+    "name": "Viprasol Tech",
+    "url": "https://viprasol.com"
+  },
+  "plugins": [
+    {
+      "name": "voice-agents",
+      "source": "./plugins/voice-agents",
+      "description": "7 skills: voice-agent-architecture, telephony-integration, voice-prompting, latency-tuning, voice-agent-testing, calling-compliance and audio-formats, with tested mu-law and latency scripts.",
+      "category": "development",
+      "tags": [
+        "voice-ai",
+        "voice-agent",
+        "twilio",
+        "exotel",
+        "plivo",
+        "pipecat",
+        "livekit",
+        "tcpa",
+        "trai"
+      ]
+    }
+  ]
+}
