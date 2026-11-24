@@ -46,12 +46,11 @@ mu-law. The bundled script implements G.711 mu-law with the standard library
 (or install `audioop-lts` on 3.13+ if you prefer the old API).
 
 ```bash
-A=${CLAUDE_SKILL_DIR}/scripts/voice_audio.py
-python $A info recording.wav
-python $A to-mulaw prompt.wav prompt.ulaw            # -> 8 kHz mono mu-law for Twilio
-python $A from-mulaw caller.ulaw caller.wav --rate 16000
-python $A frames --rate 16000 --ms 20 --codec pcm16
-python $A --self-test
+python ${CLAUDE_SKILL_DIR}/scripts/voice_audio.py info recording.wav
+python ${CLAUDE_SKILL_DIR}/scripts/voice_audio.py to-mulaw prompt.wav prompt.ulaw            # -> 8 kHz mono mu-law for Twilio
+python ${CLAUDE_SKILL_DIR}/scripts/voice_audio.py from-mulaw caller.ulaw caller.wav --rate 16000
+python ${CLAUDE_SKILL_DIR}/scripts/voice_audio.py frames --rate 16000 --ms 20 --codec pcm16
+python ${CLAUDE_SKILL_DIR}/scripts/voice_audio.py --self-test
 ```
 
 In code, import `mulaw_encode`, `mulaw_decode` and `frame_bytes` freely - the
